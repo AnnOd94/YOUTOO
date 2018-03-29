@@ -1,11 +1,29 @@
 
+body {
+  background-color: #FFF2EA;
+}
+
+.jumbotron {
+  background-color: #F8EFF3;
+}
 
 .text-center h1 {
-  color: red;
-  font-family:sans-serif;
+  color: #BA3D56;
+  font-family: 'Josefin Sans', sans-serif;
 
 }
 
 .text-center h2 {
-  color: blue;
+  color: #FF5376;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+#megaphone img {
+  width: 200px;
+  height: 200px;
+}
+
+.text-center h3 {
+  color: #FF5376;
+  font-family: 'Josefin Sans', sans-serif;
 }
