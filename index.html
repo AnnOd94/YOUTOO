@@ -5,42 +5,110 @@
   <link href= 'css/bootstrap.css' rel='stylesheet'>
   <link href='css/main.css' rel='stylesheet'>
   <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
   <meta name= "viewport" content="width=device-width,
   initial-scale=1.0">
 </head>
 
 <body>
   <nav>
-  <ul class="nav nav-pills nav-justified">
+    <ul class="nav nav-pills nav-justified">
       <li><a href="younger.html">Letters to my younger self</a></li>
       <li><a href="About Us.html">About Us</a></li>
       <li><a href="older.html">Letters to my future self</a></li
-</ul>
-</ul>
-</ul>
-</nav>
+    </ul>
+  </nav>
 
-<div class="container">
-  <div class='jumbotron'>
-    <div class="text-center">
-      <h1>#youtoo</h1>
-      <div id="write_letter">
+  <div class="container">
+    <div class='jumbotron'>
+      <div class="text-center">
+        <h1>#youtoo</h1>
+        <div id="write_letter">
          <h2>Write a letter to your younger or future self</h2>
+        </div>
       </div>
     </div>
-  </div>
-</div>
 
-      <div id='social-buttons'>
-        <button class='btn btn-large
-        btn-twitter'>Twitter</button>
-        <button class='btn btn-large
-        btn-facebook'>Facebook</button>
-        <button class='btn btn-large
-        btn-pinterest'>Pinterest</button>
+  <div class="container">
+    <div class="row">
+      <div class= "col-sm-6">
+        <p>Women can write either a Letter to their younger self - giving them advice, telling them to stay strong, reminding them that it will all be OK - or a Letter to their older self about their hopes and dreams.
+        Whatever you choose - tell your story the way you want to.</p>
+      </div>
+      <div class="col-sm-6">
+        <form id="nl-form" class="nl-form">
+          <div class="form-row">
+				   Dear
+				    <select id="version">
+						 <option value="select" selected>Select a Version of Yourself</option>
+						 <option value="future">Future Self</option>
+						 <option value="younger">Younger Self</option>
+					  </select>
+          </div>
+          <div class="form-row">
+            I am
+					  <input type="text" value="" placeholder="enter your age"/>
+            years old
+					</div>
+            <div id="select" class='years select'> </div>
+          <div class="form-row">
+            <div id="future" class='years future'>I hope you read this in
+		         <select>
+					    <option value="1" selected>Select Number of years</option>
+					 	  <option value="1">1</option>
+					    <option value="2">2</option>
+  					 	<option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+  					 </select>
+             years
+            </div>
+          </div>
+          <div class="form-row">
+            <div id="younger" class='years younger'>I wish you could have read this
+              <select>
+                <option value="1" selected>Select Number of years</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+              years ago
+            </div>
+          </div>
+        <div class="form-row">
+          <input type="text" value="" placeholder="enter your email here"/>
+        </div>
+        <div class="form-row">
+          <textarea class="form-control" rows="3"></textarea>
+        </div>
+        <div class="form-row">
+        <div class="form-group">
+            <label for="exampleFormControlFile1">Add an Image</label>
+            <input type="file" class="form-control-file" id="exampleFormControlFile1">
+          </div>
+        </div>
+        <div class="form-row">
+					<div class="nl-submit-wrap">
+						<button class="nl-submit" type="submit">Submit Your Letter</button>
+					</div>
+        </div>
+					<div class="nl-overlay"></div>
+				</form>
       </div>
     </div>
   </div>
+
+  <div id='social-buttons'>
+    <button class='btn btn-large
+        btn-twitter'>Twitter</button>
+    <button class='btn btn-large
+        btn-facebook'>Facebook</button>
+    <button class='btn btn-large
+        btn-pinterest'>Pinterest</button>
+  </div>
+
   <script
   src="http://code.jquery.com/jquery-3.3.1.min.js"
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
@@ -48,6 +116,17 @@
 
 
   <script src="js/bootstrap.min.js"></script>
+  <script>
+  $('.years').hide()
+  </script>
+  <script>
+  $(function() {
+    $('#version').change(function(){
+      $('.years').hide();
+      $('#' + $(this).val()).show();
+    });
+  });
+  </script>
   </body>
 
 </html>
