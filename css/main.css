@@ -9,13 +9,14 @@ body {
   background-color: #F8EFF3;
 }
 
-.text-center h1 {
+.jumbotron h1 {
   color: #BA3D56;
   font-family: 'Josefin Sans', sans-serif;
 
 }
 
-.text-center h2 {
+h2, h3, h4, h5, h6 {
+  text-align: center;
   color: #FF5376;
   font-family: 'Josefin Sans', sans-serif;
 }
@@ -25,15 +26,54 @@ body {
   height: 200px;
 }
 
-.text-center h3 {
-  color: #FF5376;
-  font-family: 'Josefin Sans', sans-serif;
-}
-
-.nl-form {
-	width: auto;
-}
-
 div .form-row {
   padding: 8px 0 8px 0;
+}
+
+#modal-p {
+  text-align: center;
+}
+/**Write letter form**/
+input, select {
+    line-height: inherit;
+    display: inline-block;
+    background: transparent;
+    color: #b14943;
+    cursor: pointer;
+    border: none;
+    border-bottom: 1px dashed #b14943;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding: 0;
+    margin: 0;
+    width: auto;
+    }
+  }
+  /**Select image**/
+  label > input{ /* HIDE RADIO */
+    visibility: hidden; /* Makes input not-clickable */
+    position: absolute; /* Remove input from document flow */
+  }
+  label > input + img{ /* IMAGE STYLES */
+    cursor:pointer;
+    border:2px solid transparent;
+    width: 100px;
+    height: 100px;
+    opacity: 0.4;
+  }
+  label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
+    opacity: 0.9;
+
+  }
+  #imm {
+
+  text-align: left;
+}
+#intro {
+  text-align: left;
+  font-style: italic;
+  font-size: 28px;
+}
+#letter {
+  background-color: #E0E5E5;
 }

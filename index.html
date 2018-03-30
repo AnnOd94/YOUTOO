@@ -32,10 +32,10 @@
   <div class="container">
     <div class="row">
       <div class= "col-sm-6">
-        <p>Women can write either a Letter to their younger self - giving them advice, telling them to stay strong, reminding them that it will all be OK - or a Letter to their older self about their hopes and dreams.
+        <p id="intro">Women can write either a Letter to their younger self - giving them advice, telling them to stay strong, reminding them that it will all be OK - or a Letter to their older self about their hopes and dreams.
         Whatever you choose - tell your story the way you want to.</p>
       </div>
-      <div class="col-sm-6">
+      <div class="col-sm-6" id="letter"> <!-- Write letter form -->
         <form id="nl-form" class="nl-form">
           <div class="form-row">
 				   Dear
@@ -81,25 +81,52 @@
           <input type="text" value="" placeholder="enter your email here"/>
         </div>
         <div class="form-row">
-          <textarea class="form-control" rows="3"></textarea>
+          <textarea class="form-control" rows="5" placeholder="write your message to yourself"></textarea>
         </div>
+        <!--select image-->
         <div class="form-row">
-        <div class="form-group">
-            <label for="exampleFormControlFile1">Add an Image</label>
-            <input type="file" class="form-control-file" id="exampleFormControlFile1">
-          </div>
+          <h4 id="imm">Click to select your letter image</h4>
+          <label>
+            <input type="radio" name="illustration" value="1" />
+            <img src="images/desert.png">
+          </label>
+          <label>
+            <input type="radio" name="illustration" value="2"/>
+            <img src="images/helmet.png">
+          </label>
+          <label>
+            <input id="fb3" type="radio" name="illustration" value="3" />
+            <img src="images/recycling.png">
+          </label>
+          <label>
+            <input id="fb3" type="radio" name="illustration" value="4" />
+            <img src="images/synthesizer.png">
+          </label>
         </div>
+    <!--end of select image-->
         <div class="form-row">
-					<div class="nl-submit-wrap">
-						<button class="nl-submit" type="submit">Submit Your Letter</button>
-					</div>
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+              Submit Your Letter
+          </button>
         </div>
-					<div class="nl-overlay"></div>
-				</form>
+        <div class="nl-overlay"></div>
+      </form>
+      <!--Modal-->
+      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title" id="exampleModalLabel">Your letter has been submitted!</h3>
+        </div>
+        <div class="modal-body">
+          <p id="modal-p">It will now be shown on our site, where other women and girls can read and learn from it. If it was sent to your younger self, a copy of your letter has been sent to your email. If it was sent to your future self, you will receive it by email on the date you specified. #YOUTOO
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
       </div>
     </div>
-  </div>
-
   <div id='social-buttons'>
     <button class='btn btn-large
         btn-twitter'>Twitter</button>
@@ -116,16 +143,21 @@
 
 
   <script src="js/bootstrap.min.js"></script>
-  <script>
+  <script> //Hide future younger text
   $('.years').hide()
   </script>
-  <script>
+  <script> //Call future and younger text when selected
   $(function() {
     $('#version').change(function(){
       $('.years').hide();
       $('#' + $(this).val()).show();
     });
   });
+  </script>
+  <script> //open modal when submitted
+    $('.modal-dialog').on('shown.bs.modal', function () {
+    $('.btn btn-primary').trigger('focus')
+    })
   </script>
   </body>
 
