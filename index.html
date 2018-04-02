@@ -1,49 +1,165 @@
 <!DOCTYPE html>
 <html>
-   <head>
-      <title>#youtoo</title>
-      <link href= 'css/bootstrap.css' rel='stylesheet'>
-      <link href='css/main.css' rel='stylesheet'>
-      <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
-      <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-      <meta name= "viewport" content="width=device-width,
-         initial-scale=1.0">
-   </head>
-   <body>
-      <nav>
-         <ul class="nav nav-pills nav-justified">
-            <li><a href="index.html">#YOUTOO</a></li>
-            <li><a href="About Us.html">About Us</a></li>
-            <li><a href="younger.html">Letters to my younger self</a></li>
-            <li><a href="older.html">Letters to my future self</a></li
-         </ul>
-      </nav>
-      <div class="container">
-         <div class='jumbotron'>
-            <div class="text-center">
-               <h1>#youtoo</h1>
-               <div id="write_letter">
-                  <h2>Write a letter to your younger or future self</h2>
-               </div>
-            </div>
-         </div>
-      </div>
+<head>
+  <title>#youtoo</title>
+  <link href= 'css/bootstrap.css' rel='stylesheet'>
+  <link href='css/main.css' rel='stylesheet'>
+  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <meta name= "viewport" content="width=device-width,
+  initial-scale=1.0">
+</head>
 
-      <div id='social-buttons'>
-        <a href="https://twitter.com/"><button class='btn btn-large
-           btn-twitter'>Twitter</button></a>
-        <a href="https://facebook.com"><button class='btn btn-large
-           btn-facebook'>Facebook</button></a>
-        <a href="https://pinterest.com"><button class='btn btn-large
-           btn-pinterest'>Pinterest</button></a>
+<body>
+  <nav>
+    <ul class="nav nav-pills nav-justified">
+      <li id="home"><a href="index.html">#YOUTOO</a></li>
+      <li><a href="younger.html">Letters to my younger self</a></li>
+      <li><a href="About Us.html">About Us</a></li>
+      <li><a href="older.html">Letters to my future self</a></li
+    </ul>
+  </nav>
+
+  <div class="jumbotron">
+    <div class="container">
+      <h1>#YOUTOO</h1>
+      <div id="write_letter">
+       <h2>Write a letter to your younger or future self</h2>
       </div>
-    
+    </div>
+  </div>
+  <div id="intro">
+    <div class="container">
+    <p>If you could speak to a younger version of yourself, what advice would you give them?<br />
+If you could speak to a future version of yourself, what questions would you tell them?<br /> Write your letter below.</p>
+    </div>
+  </div>
+  <div class="container" id="letter">
+        <form id="nl-form" class="nl-form">
+          <div class="form-row">
+				   Dear
+				    <select id="version">
+						 <option value="select" selected>Select a Version of Yourself</option>
+						 <option value="future">Future Self</option>
+						 <option value="younger">Younger Self</option>
+					  </select>
+          </div>
+          <div class="form-row">
+            I am
+					  <input type="text" value="" placeholder="enter your age"/>
+            years old
+					</div>
+            <div id="select" class='years select'> </div>
+          <div class="form-row">
+            <div id="future" class='years future'>I hope you read this in
+		         <select>
+					    <option value="1" selected>Select Number of years</option>
+					 	  <option value="1">1</option>
+					    <option value="2">2</option>
+  					 	<option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+  					 </select>
+             years
+            </div>
+          </div>
+          <div class="form-row">
+            <div id="younger" class='years younger'>I wish you could have read this
+              <select>
+                <option value="1" selected>Select Number of years</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+              years ago
+            </div>
+          </div>
+        <div class="form-row">
+          <input type="text" value="" placeholder="enter your email here"/>
+        </div>
+        <div class="form-row">
+          <textarea rows="5" placeholder="write your message to yourself"></textarea>
+        </div>
+        <!--select image-->
+        <div class="form-row">
+          <h3 id="imm">Click to select your letter image</h4>
+          <label>
+            <input type="radio" name="illustration" value="1" />
+            <img src="images/desert.png">
+          </label>
+          <label>
+            <input type="radio" name="illustration" value="2"/>
+            <img src="images/helmet.png">
+          </label>
+          <label>
+            <input id="fb3" type="radio" name="illustration" value="3" />
+            <img src="images/recycling.png">
+          </label>
+          <label>
+            <input id="fb3" type="radio" name="illustration" value="4" />
+            <img src="images/synthesizer.png">
+          </label>
+        </div>
+    <!--end of select image-->
+        <div class="form-row">
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+              Submit Your Letter
+          </button>
+        </div>
+        <div class="nl-overlay"></div>
+      </form>
+      </div>
+        <div id='social-buttons'>
+        <button class='btn btn-large
+        btn-twitter'>Twitter</button>
+        <button class='btn btn-large
+        btn-facebook'>Facebook</button>
+        <button class='btn btn-large
+        btn-pinterest'>Pinterest</button>
       </div>
       </div>
-      <script
-         src="http://code.jquery.com/jquery-3.3.1.min.js"
-         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-         crossorigin="anonymous"></script>
-      <script src="js/bootstrap.min.js"></script>
-   </body>
+      <!--Modal-->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title" id="exampleModalLabel">Your letter has been submitted!</h3>
+      </div>
+      <div class="modal-body">
+        <p id="modal-p">It will now be shown on our site, where other women and girls can read and learn from it. If it was sent to your younger self, a copy of your letter has been sent to your email. If it was sent to your future self, you will receive it by email on the date you specified. #YOUTOO
+          </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+
+<script
+  src="http://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+
+
+<script src="js/bootstrap.min.js"></script>
+<script> //Hide future younger text
+  $('.years').hide()
+  </script>
+  <script> //Call future and younger text when selected
+  $(function() {
+    $('#version').change(function(){
+      $('.years').hide();
+      $('#' + $(this).val()).show();
+    });
+  });
+  </script>
+  <script> //open modal when submitted
+    $('.modal-dialog').on('shown.bs.modal', function () {
+    $('.btn btn-primary').trigger('focus')
+    })
+  </script>
+  </body>
+
 </html>

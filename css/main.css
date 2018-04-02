@@ -1,18 +1,48 @@
 
 body {
-  background-color: #FFF2EA;
+  background-color: #FFFEF9;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  color: #56495D;
+}
+nav ul {
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: lighter;
+}
+li a {
+  color: #1869B1;
+}
+#home {
+  font-weight: bold;
+  text-decoration: underline;
+}
+.jumbotron{
+  background-image: url('../images/girlsmarch.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: auto;
+  max-width: 100%;
+  box-shadow: inset 0 -800px 0px 0px rgba(255, 255, 255, 0.8);
+  margin-bottom: 0;
 }
 
-.jumbotron {
-  background-color: #F8EFF3;
-}
-
-.text-center h1 {
+.jumbotron h1 {
   color: #BA3D56;
   font-family: 'Josefin Sans', sans-serif;
-
+  font-weight: bold;
+  text-align: center;
 }
 
+h2 {
+  text-align: center;
+  color: #BA3D56;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+ann-changes
+h3, h4, h5, h6 {
+  text-align: center;
 nav {
   margin-left: 105px;
   margin-right: 105px;
@@ -32,20 +62,113 @@ a{
   color: inherit;
 }
 
-.text-center h2 {
-  color: #FF5376;
-  font-family: 'Josefin Sans', sans-serif;
-}
-
 #megaphone img {
   width: 200px;
   height: 200px;
 }
 
-.text-center h3 {
-  color: #FF5376;
-  font-family: 'Josefin Sans', sans-serif;
+div .form-row {
+  padding: 8px 0 8px 0;
+  font-size: 32px;
+  font-weight: 50;
 }
+
+#modal-p {
+  text-align: center;
+}
+/**Write letter form**/
+#nl-form {
+  padding-top: 48px;
+}
+input, select {
+    line-height: inherit;
+    display: inline-block;
+    background: transparent;
+    color: #b14943;
+    cursor: pointer;
+    border: 0;
+    border-bottom: 1px dashed #b14943;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding: 0;
+    margin: 0;
+    width: auto;
+    }
+  textarea {
+      line-height: inherit;
+      display: inline-block;
+      text-align: center;
+      background: transparent;
+      color: #b14943;
+      cursor: pointer;
+      border: 0;
+      border-bottom: 1px dashed #b14943;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      padding: 0;
+      margin: 0;
+      width: 400px;
+      }
+  /**Select image**/
+label > input{ /* HIDE RADIO */
+  visibility: hidden; /* Makes input not-clickable */
+  position: absolute; /* Remove input from document flow */
+}
+label > input + img{ /* IMAGE STYLES */
+  cursor:pointer;
+  border:2px solid transparent;
+  width: 100px;
+  height: 100px;
+  opacity: 0.4;
+}
+label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
+  opacity: 0.9;
+
+}
+label {
+  padding: 24px 0 0 0;
+}
+#imm {
+
+  text-align: center;
+}
+#intro {
+  text-align: center;
+  font-size: 16px;
+  background-color: #2EA0CC;
+  color: white;
+  padding: 24px 0 24px 0;
+  font-style: italic;
+}
+#letter {
+  text-align: center;
+
+}
+.btn-primary {
+  color: #fff;
+  background-color: #FF5376;
+  border-color: #BA3D56;
+  width: 400px;
+  height: 48px;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 24px;
+}
+
+/*Blue Jumbo - #94DAD5
+Background - #DADAE0
+form - #F1D9D5
+heading - #BA3D56
+other headings - #FF5376
+*/
+/* #B386FF - light purple - Box Background
+#FFFFFE - white - background
+#87E6FE - light blue - button
+#2E235E - dark purple - h1
+#6197A3 - medium Blue - Nav Background
+#61459E - medium purple - h
+#986FE0 - light medium purple - body
+#FFFEF9 - cream
+#986FE0*/
 
 .boxed {
 border: 5px solid grey;
@@ -60,3 +183,4 @@ max-width: 1000px;
 #get-in-touch {
   float: right;
 }
+
