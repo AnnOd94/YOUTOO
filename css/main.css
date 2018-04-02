@@ -40,10 +40,26 @@ h2 {
   font-family: 'Josefin Sans', sans-serif;
 }
 
+ann-changes
 h3, h4, h5, h6 {
   text-align: center;
-  color: #FF5376;
-  font-family: 'Josefin Sans', sans-serif;
+nav {
+  margin-left: 105px;
+  margin-right: 105px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+li {
+font-family: 'Open Sans', sans-serif;
+}
+
+p {
+font-family: 'Open Sans', sans-serif;
+}
+
+a{
+  color: inherit;
 }
 
 #megaphone img {
@@ -137,6 +153,7 @@ label {
   font-family: 'Josefin Sans', sans-serif;
   font-size: 24px;
 }
+
 /*Blue Jumbo - #94DAD5
 Background - #DADAE0
 form - #F1D9D5
@@ -152,3 +169,18 @@ other headings - #FF5376
 #986FE0 - light medium purple - body
 #FFFEF9 - cream
 #986FE0*/
+
+.boxed {
+border: 5px solid grey;
+border-radius: 5px;
+margin: 30px auto;
+padding: 15px;
+background-color: #F8EFF3;
+text-align: justify;
+max-width: 1000px;
+}
+
+#get-in-touch {
+  float: right;
+}
+
