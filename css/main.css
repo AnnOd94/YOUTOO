@@ -50,7 +50,9 @@ a{
 .boxed {
 border: 5px solid grey;
 border-radius: 5px;
-margin: 30px 100px;
+margin: 30px auto;
 padding: 15px;
 background-color: #F8EFF3;
+text-align: justify;
+max-width: 1000px;
 }
