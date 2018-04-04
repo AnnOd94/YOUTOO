@@ -211,3 +211,22 @@ li.buttons:hover{
 li.buttons.active, li.buttons:hover{
  background: #FF5376;
 }
+
+.social {
+  width: 80px;
+  height:80px;
+  border: none;
+}
+
+.contact {
+  padding: 10px;
+  margin: 10px;
+  font-size: 18px;
+}
+
+.link-to-home {
+  color: #062854;
+  font-family: 'Josefin Sans', sans-serif;
+  text-align: center;
+  font-size: 40px;
+}

@@ -33,118 +33,117 @@
          </div>
       </div>
       <div id="buzz" class="text-center">
-         <div class="container" id="letter">
-            <form id="nl-form" class="nl-form">
-               <div class="form-row">
-                  Dear
-                  <select id="version">
-                     <option value="select" selected>Select a Version of Yourself</option>
-                     <option value="future">Future Self</option>
-                     <option value="younger">Younger Self</option>
-                  </select>
-               </div>
-               <div class="form-row">
-                  My name is
-                  <input type="text" value="" placeholder="enter your name"/>
-                  .
-               </div>
-               <div class="form-row">
-                  I am
-                  <input type="text" value="" placeholder="enter your age"/>
-                  years old
-               </div>
-               <div id="select" class='years select'> </div>
-               <div class="form-row">
-                  <div id="future" class='years future'>
-                     I hope you read this in
-                     <select>
-                        <option value="1" selected>Select Number of years</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                     </select>
-                     years
-                  </div>
-               </div>
-               <div class="form-row">
-                  <div id="younger" class='years younger'>
-                     I wish you could have read this
-                     <select>
-                        <option value="1" selected>Select Number of years</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                     </select>
-                     years ago
-                  </div>
-               </div>
-               <div class="form-row">
-                  <input type="text" value="" placeholder="enter your e-mail"/>
-               </div>
-               <div class="form-row">
-                  <textarea rows="5" placeholder="write your message to yourself"></textarea>
-               </div>
-               <!--select image-->
-               <div class="form-row">
-                  <h3 id="imm">
-                  Click to select your letter image</h4>
-                  <label>
-                  <input type="radio" name="illustration" value="1" />
-                  <img src="images/desert.png">
-                  </label>
-                  <label>
-                  <input type="radio" name="illustration" value="2"/>
-                  <img src="images/helmet.png">
-                  </label>
-                  <label>
-                  <input id="fb3" type="radio" name="illustration" value="3" />
-                  <img src="images/recycling.png">
-                  </label>
-                  <label>
-                  <input id="fb3" type="radio" name="illustration" value="4" />
-                  <img src="images/synthesizer.png">
-                  </label>
-               </div>
-               <!--end of select image-->
-               <div class="form-row">
-                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-                  Submit Your Letter
-                  </button>
-               </div>
-               <div class="nl-overlay"></div>
-            </form>
-            <!--Slider Start -->
-            <div class="slider">
-               <ul>
-                  <li class="quote one">
-                     "Knowing there is a 'high calling' is what will sustain and fulfill you" - Oprah Winfrey
-                  </li>
-                  <li class="quote two">
-                     "Be yourself. Be easier on yourself. Become yourself, as fully as possible" - J K Rowling
-                  </li>
-                  <li class="quote three">
-                     "You will get through this fog and uncertainty....You won't become cynical, stoical or hard-bitten." - Madeleine Albright
-                  </li>
-               </ul>
-               <ul class="list-buttons">
-                  <li class="buttons" id="one" class="active"></li>
-                  <li class="buttons" id="two"></li>
-                  <li class="buttons" id="three"></li>
-               </ul>
+      <div class="container" id="letter">
+         <form id="nl-form" class="nl-form">
+            <div class="form-row">
+               Dear
+               <select id="version">
+                  <option value="select" selected>Select a Version of Yourself</option>
+                  <option value="future">Future Self</option>
+                  <option value="younger">Younger Self</option>
+               </select>
             </div>
-            <!--Slider End -->
+            <div class="form-row">
+               My name is
+               <input type="text" value="" placeholder="enter your name"/>
+               .
+            </div>
+            <div class="form-row">
+               I am
+               <input type="text" value="" placeholder="enter your age"/>
+               years old
+            </div>
+            <div id="select" class='years select'> </div>
+            <div class="form-row">
+               <div id="future" class='years future'>
+                  I hope you read this in
+                  <select>
+                     <option value="1" selected>Select Number of years</option>
+                     <option value="1">1</option>
+                     <option value="2">2</option>
+                     <option value="3">3</option>
+                     <option value="4">4</option>
+                     <option value="5">5</option>
+                  </select>
+                  years
+               </div>
+            </div>
+            <div class="form-row">
+               <div id="younger" class='years younger'>
+                  I wish you could have read this
+                  <select>
+                     <option value="1" selected>Select Number of years</option>
+                     <option value="1">1</option>
+                     <option value="2">2</option>
+                     <option value="3">3</option>
+                     <option value="4">4</option>
+                     <option value="5">5</option>
+                  </select>
+                  years ago
+               </div>
+            </div>
+            <div class="form-row">
+               <input type="text" value="" placeholder="enter your e-mail"/>
+            </div>
+            <div class="form-row">
+               <textarea rows="5" placeholder="write your message to yourself"></textarea>
+            </div>
+            <!--select image-->
+            <div class="form-row">
+               <h3 id="imm">
+               Click to select your letter image</h4>
+               <label>
+               <input type="radio" name="illustration" value="1" />
+               <img src="images/desert.png">
+               </label>
+               <label>
+               <input type="radio" name="illustration" value="2"/>
+               <img src="images/helmet.png">
+               </label>
+               <label>
+               <input id="fb3" type="radio" name="illustration" value="3" />
+               <img src="images/recycling.png">
+               </label>
+               <label>
+               <input id="fb3" type="radio" name="illustration" value="4" />
+               <img src="images/synthesizer.png">
+               </label>
+            </div>
+            <!--end of select image-->
+            <div class="form-row">
+               <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+               Submit Your Letter
+               </button>
+            </div>
+            <div class="nl-overlay"></div>
+         </form>
+         <!--Slider Start -->
+         <div class="slider">
+            <ul>
+               <li class="quote one">
+                  "Knowing there is a 'high calling' is what will sustain and fulfill you" - Oprah Winfrey
+               </li>
+               <li class="quote two">
+                  "Be yourself. Be easier on yourself. Become yourself, as fully as possible" - J K Rowling
+               </li>
+               <li class="quote three">
+                  "You will get through this fog and uncertainty....You won't become cynical, stoical or hard-bitten." - Madeleine Albright
+               </li>
+            </ul>
+            <ul class="list-buttons">
+               <li class="buttons" id="one" class="active"></li>
+               <li class="buttons" id="two"></li>
+               <li class="buttons" id="three"></li>
+            </ul>
          </div>
+         <!--Slider End -->
          <div id='social-buttons'>
-            <button class='btn btn-large
-               btn-twitter'>Twitter</button>
-            <button class='btn btn-large
-               btn-facebook'>Facebook</button>
-            <button class='btn btn-large
-               btn-pinterest'>Pinterest</button>
+            <a href="https://twitter.com/"><button class='btn btn-large
+               btn-twitter'><img src="images/twitter.jpg" class="social"></button></a>
+            <a href="https://facebook.com"><button class='btn btn-large
+               btn-facebook'><img src="images/facebook.png" class="social"></button></a>
+            <a href="https://pinterest.com"><button class='btn btn-large
+               btn-pinterest'><img src="images/pinterest.jpg" class="social"></button></a>
          </div>
       </div>
       <!--Modal-->
@@ -186,15 +185,15 @@
          })
       </script>
       <script> //slider script
-        $(document).ready(function(){
-          $('.buttons').click(function(){
-            var slide = $(this).attr('id');
-            $('.quote').hide('slow');
-            $('.'+slide).show('slow');
-            $('.buttons').removeClass('active');
-            $(this).addClass('active');
-          });
-        });
+         $(document).ready(function(){
+           $('.buttons').click(function(){
+             var slide = $(this).attr('id');
+             $('.quote').hide('slow');
+             $('.'+slide).show('slow');
+             $('.buttons').removeClass('active');
+             $(this).addClass('active');
+           });
+         });
       </script>
    </body>
 </html>
