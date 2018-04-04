@@ -117,6 +117,26 @@
                </div>
                <div class="nl-overlay"></div>
             </form>
+            <!--Slider Start -->
+            <div class="slider">
+               <ul>
+                  <li class="quote one">
+                     "Knowing there is a 'high calling' is what will sustain and fulfill you" - Oprah Winfrey
+                  </li>
+                  <li class="quote two">
+                     "Be yourself. Be easier on yourself. Become yourself, as fully as possible" - J K Rowling
+                  </li>
+                  <li class="quote three">
+                     "You will get through this fog and uncertainty....You won't become cynical, stoical or hard-bitten." - Madeleine Albright
+                  </li>
+               </ul>
+               <ul class="list-buttons">
+                  <li class="buttons" id="one" class="active"></li>
+                  <li class="buttons" id="two"></li>
+                  <li class="buttons" id="three"></li>
+               </ul>
+            </div>
+            <!--Slider End -->
          </div>
          <div id='social-buttons'>
             <button class='btn btn-large
@@ -164,6 +184,17 @@
          $('.modal-dialog').on('shown.bs.modal', function () {
          $('.btn btn-primary').trigger('focus')
          })
+      </script>
+      <script> //slider script
+        $(document).ready(function(){
+          $('.buttons').click(function(){
+            var slide = $(this).attr('id');
+            $('.quote').hide('slow');
+            $('.'+slide).show('slow');
+            $('.buttons').removeClass('active');
+            $(this).addClass('active');
+          });
+        });
       </script>
    </body>
 </html>

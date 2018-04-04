@@ -174,3 +174,40 @@ label {
   padding-top: 40px;
   padding-bottom: 40px;
 }
+li.quote{
+ background: #FFF2EA;
+ position: absolute;
+ border-radius: 4px;
+ width: 500px;
+ left: 50%;
+ margin-left: -250px;
+ display: none;
+ color: #424B54;
+ font-family: 'Josefin Sans', sans-serif;
+ text-align: center;
+ top: 30%;
+ padding: 20px;
+}
+ul.list-buttons{
+ position: absolute;
+ bottom: 0;
+ left: 50%;
+  margin-left: -100px;
+}
+li.buttons{
+ width: 10px;
+ height: 10px;
+ border-radius: 50%;
+ text-align: center;
+ box-shadow: 1px 1px 4px #424B54;
+ display: inline-block;
+ margin: 0 10px;
+ transition: background .5s linear;
+}
+li.buttons:hover{
+ cursor: pointer;
+}
+
+li.buttons.active, li.buttons:hover{
+ background: #FF5376;
+}
