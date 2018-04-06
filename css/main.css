@@ -171,7 +171,7 @@ label {
   background-color: #DBC0CF;
 }
 #social-buttons {
-  padding-top: 40px;
+  padding-top: 120px;
   padding-bottom: 40px;
 }
 li.quote{
@@ -189,9 +189,8 @@ li.quote{
 }
 ul.list-buttons{
  position: absolute;
- bottom: 0;
  left: 50%;
-  margin-left: -100px;
+ margin-left: -100px;
 }
 li.buttons{
  width: 10px;
@@ -229,3 +228,18 @@ li.buttons.active, li.buttons:hover{
   text-align: center;
   font-size: 40px;
 }
+@media (max-width: 600px) {
+    .nl-form {
+      margin: auto;
+    }
+    div .form-row, .nl-form input, .nl-form button, .nl-form select, .nl-form textarea {
+      font-size: 24px;
+      max-width: 300px;
+      text-align: center;
+      margin: auto;
+    }
+  #intro p {
+      font-size: 16px;
+      padding: 0 16px;
+    }
+  }
